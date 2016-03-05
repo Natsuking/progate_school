@@ -1,3 +1,561 @@
-h1{
-	color: red;
+/*-------  ここから共通のCSS（変更不要）  --------*/
+body {
+  margin: 0;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  color: #888;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #323A45;
+  transition: all .3s;
+}
+
+a:hover {
+  color: #0dc0c0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+h4, h5 {
+  color: #444;
+  font-size: 18px;
+}
+
+.container {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*-------  ここまで共通のCSS（変更不要） --------*/
+
+/*------- ここからCSSを書き始めてください --------*/
+
+
+
+header{
+  height:30px;
+  border-bottom:1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width:100%;
+  background-color:white;
+}
+
+.header-left{
+  float:left;
+}
+
+.header-left p{
+  color: #777;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+}
+
+.header-left p:hover{
+  color: #0DC0C0;
+  cursor:pointer;
+}
+
+.header-right{
+  float: right
+}
+
+.header-right ul{
+	margin-top: -5px;
+}
+
+.header-right ul li{
+  float:left;
+  padding:10px;
+  color:#323A45;
+  font-weight: bold;
+}
+
+.header-right ul li:hover{
+  color: #0DC0C0;
+  cursor:pointer;
+}
+
+.title-wrapper{
+  background-image: url('https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/backgrounds/top.jpg');
+  height: 500px;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.title-contents{
+  padding-top: 190px;
+  text-align: center;
+}
+
+.title-overlay{
+  background: rgba(0, 0, 0, 0.6);
+  height: 500px;
+}
+
+.title-contents h2{
+  color: #f3f3f3;
+  font-size: 45px;
+}
+
+.title-p{
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.btn.detail{
+  border:1px solid rgba(255, 255, 255, 0.3);
+  width: 100px;
+  display: inline-block;
+  color: #f3f3f3;
+  font-size:15px;
+  font-weight: 900;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn.detail:hover{
+  border:1px solid #f3f3f3;
+  cursor: pointer;
+  transition: .6s;
+}
+
+.lang-wrapper{
+  margin-bottom: 100px;
+}
+
+.lang-wrapper p, h3{
+  text-align: center;
+}
+
+
+
+h3{
+  font-size: 30px;
+}
+
+.lang-img{
+  margin:0 auto;
+}
+
+.lang-block{
+  width:330px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.lang-row{
+  height: 150px;
+  padding: 50px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.lang-row{
+  clear: both;
+}
+
+.lang-left{
+  float: left;
+}
+
+.lang-right{
+  float: right;
+}
+
+.first-half{
+  background-color: #f4f4f4;
+  height: 380px;
+  text-align: center;
+}
+
+.first-half p{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 60px;
+}
+.first-half img{
+  padding-top: 10px;
+}
+
+.second-half{
+  padding-top: 100px;
+}
+
+.second-half h3{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.facts-wrapper{
+  height:900px;
+}
+
+.facts-row{
+  width: 1000px;
+  margin: 0 auto;
+  
+}
+
+.facts-block {
+  width: 470px;
+  padding-bottom: 70px;
+}
+
+.facts-left{
+  float: left;
+}
+
+.facts-right{
+  float: right;
+}
+
+
+.price-wrapper{
+  background-color: #f4f4f4;
+  height: 900px;
+}
+
+.price-wrapper p, h4, li{
+  text-align: center;
+}
+
+.price-main-title{
+  padding: 30px;
+  width: 300px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.price-div{
+  margin:0 auto;
+  width: 1100px;
+}
+
+.price-block{
+  background-color: white;
+  width: 32%;
+  float: left;
+  height: 650px;
+}
+
+.price-block.center{
+  margin: 0 2%;
+}
+
+.price-contents{
+  width: 92%;
+  margin-top: 30px;
+  margin-left: 4%;
+}
+
+.price-title, .price-tag{
+  width: 100%;
+  font-size: 30px;
+  padding:30px 0;
+}
+
+.price-title{
+  background-color: #323A45;
+  color: white;
+}
+
+.center .price-title{
+  background-color: #0DC0C0;
+}
+.price-tag{
+  background-color: #f4f4f4;
+  margin-bottom: 60px;
+}
+
+.price-block ul{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.price-block li{
+  padding: 20px;
+  border-bottom:1px solid #f4f4f4;
+}
+
+.price-btn{
+  width: 100px;
+  background-color: #2d323a;
+  padding: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.member-wrapper{
+  padding-top: 50px;
+  height: 1300px;
+}
+
+.member-wrapper img{
+  width:200px;
+  border-radius:50%;
+}
+
+.member-block, .member-block p{
+  text-align: center;
+}
+
+.member-intro{
+  font-size: 18px;
+  padding: 10px;
+}
+
+.member-name{
+  margin-bottom: 50px;
+}
+
+.member-inner{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.quote-wrapper{
+  background-image:url(https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/backgrounds/night_view.jpg);
+  background-size: cover;
+  height: 400px;
+}
+.quote-overlay{
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+}
+
+.quote-wrapper h4{
+  color: white;
+  font-size: 22px;
+}
+
+.quote{
+  padding-top: 180px;
+}
+
+.column-wrapper{
+  height: 1500px;
+  background-color: #f4f4f4;
+}
+
+.column-inner{
+  width: 1170px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.column-inner h3{
+  padding-top: 70px;
+  margin-top: 0;
+}
+
+.column-inner ul{
+  width: 400px;
+  margin: 30px auto;
+  height: 50px;
+}
+
+.column-inner li{
+  float: left;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  font-size:18px;
+}
+
+.column-inner li.center{
+  margin:0 20px;
+}
+
+.column-inner li.left{
+  background-color: #009ca8;
+  color: white;
+}
+
+
+.column-block{
+  width: 40%;
+  padding: 7px 7px 27px;
+  display: inline-block;
+  background-color: white;
+  margin:0 15px 30px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.column-block img{
+  width: 100%;
+}
+
+.column-block h5{
+  font-size: 17px;
+  font-weight: 600;
+  margin: 17px 0 0;
+}
+
+.column-btn {
+  background-color: #2d323a;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.form-wrapper{
+  height: 650px;
+  background-image: url(https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/backgrounds/contact.jpg);
+  background-size: cover;
+}
+
+.form-inner{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.form-overlay{
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+}
+
+.white-font, .form-block.right p, .form-block h5{
+  color: white;
+}
+
+.form-wrapper h3{
+  font-weight: 500;
+  padding: 80px 0 20px;
+  margin: 0;
+}
+
+.form-block table{
+  width: 100%;
+}
+
+.form-block.left{
+  float: left;
+  width: 50%
+}
+
+.form-block.left p{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.form-block.left input, textarea{
+  width: 100%;
+  border: none;
+  vertical-align: middle;
+  background-color: rgba(250, 250, 250, 0.08);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.form-block.left textarea{
+  padding-bottom: 100px;
+  margin-bottom: 20px;
+}
+
+.form-btn{
+  display: inline-block;
+}
+
+#submit-btn{
+  color: white;
+  padding: 15px 35px;
+  background-color: #009ca8;
+  
+}
+
+.form-block.right{
+  float: right;
+  width: 40%;
+  margin-right: 15px;
+}
+
+.form-block.right h5{
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.form-block.right p{
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.address-ind{
+  margin-left: 10px;
+}
+
+.phone-num{
+  text-indent: 1em;
+}
+
+footer{
+  height: 320px;
+}
+
+.footer-inner{
+  text-align: center;
+}
+
+.white-footer{
+  height: 240px;
+}
+
+.white-footer-content{
+  padding-top: 60px;
+}
+
+.footer-inner p{
+  color: #555;
+  font-size: 32px;
+}
+
+.fa-facebook, .fa-twitter{
+  font-size: 35px;
+  padding: 40px 10px;
+}
+
+.black-footer{
+  background-color: #222;
+  margin-top: 20px;
+  padding-top: 50px;
+  height: 60px;
 }
